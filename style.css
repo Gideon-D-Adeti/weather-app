@@ -4,6 +4,10 @@
 /* Define custom variables */
 :root {
   /* Colors */
+  --blue-color: #3b82f6;
+  --neutral-color: #d4d4d4;
+  --dark-blue-color: #1d4ed8;
+  --white-color: #fff;
 
   /* Standard pxs */
   --x-big: 64px;
@@ -11,6 +15,7 @@
   --normal: 16px;
   --small: 8px;
   --x-small: 4px;
+  --xx-small: 2px;
 
   /* Others */
 }
@@ -18,6 +23,8 @@
 /* Apply general styling and reset */
 html {
   box-sizing: border-box;
+  position: relative;
+  min-height: 100%;
 }
 
 *,
@@ -38,5 +45,85 @@ input,
 button {
   font: inherit;
   padding: var(--x-small) var(--small);
-  border-radius: var(--x-small);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--neutral-color);
+  display: grid;
+  grid-template-rows: 12.5vh auto;
+}
+
+header,
+main,
+footer {
+  padding: var(--small);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue-color);
+}
+
+header *,
+::placeholder {
+  color: var(--white-color);
+}
+
+.search {
+  border: var(--xx-small) solid var(--white-color);
+  border-radius: var(--big);
+  padding: var(--x-small) var(--small);
+  display: flex;
+  align-items: center;
+}
+
+.search>* {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.search .mdi {
+  font-size: 20px;
+}
+
+.toggle-temperature button {
+  border: var(--xx-small) solid var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.toggle-temperature button:hover {
+  background-color: var(--dark-blue-color);
+}
+
+.toggle-temperature button:active {
+  transform: scale(0.9);
+}
+
+.toggle-temperature .mdi {
+  font-size: 24px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+}
+
+footer .author {
+  color: inherit;
+}
+
+footer .author:hover {
+  font-weight: 900;
 }

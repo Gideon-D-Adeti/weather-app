@@ -4,13 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <div>
+            <h1>Weather App</h1>
+        </div>
 
-    <script src=""></script>
+        <div>
+            <form action="">
+                <div class="search">
+                    <input type="text" placeholder="Search City">
+                    <button type="submit">
+                        <span class="mdi mdi-magnify" title="Search"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="toggle-temperature">
+            <button>
+                <span class="mdi mdi-temperature-fahrenheit" title="Change to °F"></span>
+            </button>
+        </div>
+    </header>
+
+    <main></main>
+
+    <footer>
+        <p>Author - <a class="author" href="https://github.com/Gideon-D-Adeti" target="_blank">Gideon D. Adeti</a></p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
