@@ -4,10 +4,6 @@
 /* Define custom variables */
 :root {
   /* Colors */
-  --blue-color: #3b82f6;
-  --neutral-color: #d4d4d4;
-  --dark-blue-color: #1d4ed8;
-  --white-color: #fff;
 
   /* Standard pxs */
   --x-big: 64px;
@@ -49,7 +45,7 @@ button {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: var(--neutral-color);
+  background: linear-gradient(#87ceeb, #f0f0f0);
   display: grid;
   grid-template-rows: 12.5vh auto;
 }
@@ -64,23 +60,32 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--blue-color);
+  box-shadow: 0 0 var(--small) rgba(0, 0, 0, 0.1);
 }
 
-header *,
-::placeholder {
-  color: var(--white-color);
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo .mdi {
+  font-size: var(--x-big);
 }
 
 .search {
-  border: var(--xx-small) solid var(--white-color);
+  border: var(--xx-small) solid black;
   border-radius: var(--big);
   padding: var(--x-small) var(--small);
+  margin-left: -17.5%;
+}
+
+.search form {
   display: flex;
   align-items: center;
 }
 
-.search>* {
+.search form > * {
   border: none;
   outline: none;
   background-color: transparent;
@@ -91,7 +96,7 @@ header *,
 }
 
 .toggle-temperature button {
-  border: var(--xx-small) solid var(--white-color);
+  border: var(--xx-small) solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,7 +106,7 @@ header *,
 }
 
 .toggle-temperature button:hover {
-  background-color: var(--dark-blue-color);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .toggle-temperature button:active {
@@ -109,7 +114,7 @@ header *,
 }
 
 .toggle-temperature .mdi {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 footer {
