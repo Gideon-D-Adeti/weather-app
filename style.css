@@ -189,6 +189,21 @@ main .right-information {
   font-size: 84px;
 }
 
+footer {
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+footer .author {
+  color: inherit;
+}
+
+footer .author:hover {
+  font-weight: 900;
+}
 
 @media screen and (320px <=width <=425px) {
   body {
