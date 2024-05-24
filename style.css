@@ -6,6 +6,7 @@
   /* Colors */
 
   /* Standard pxs */
+  --xx-big: 128px;
   --x-big: 64px;
   --big: 32px;
   --normal: 16px;
@@ -19,8 +20,6 @@
 /* Apply general styling and reset */
 html {
   box-sizing: border-box;
-  position: relative;
-  min-height: 100%;
 }
 
 *,
@@ -44,10 +43,8 @@ button {
 }
 
 body {
+  background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(#87ceeb, #f0f0f0);
-  display: grid;
-  grid-template-rows: 12.5vh auto;
 }
 
 header,
@@ -56,28 +53,17 @@ footer {
   padding: var(--small);
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 0 var(--small) rgba(0, 0, 0, 0.1);
-}
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  header *,
+  ::placeholder, main {
+    color: rgba(255, 255, 255, 0.8);
+  }
 
-.logo .mdi {
-  font-size: var(--x-big);
-}
 
 .search {
-  border: var(--xx-small) solid black;
+  border: var(--xx-small) solid rgba(255, 255, 255, 0.8);
   border-radius: var(--big);
-  padding: var(--x-small) var(--small);
-  margin-left: -17.5%;
+  padding: var(--xx-small) var(--x-small);
 }
 
 .search form {
@@ -85,50 +71,52 @@ header {
   align-items: center;
 }
 
-.search form > * {
+form>* {
   border: none;
   outline: none;
   background-color: transparent;
 }
 
-.search .mdi {
-  font-size: 20px;
+.search .mdi, .toggle-temperature {
+  cursor: pointer;
 }
 
 .toggle-temperature button {
-  border: var(--xx-small) solid black;
+  border: var(--xx-small) solid rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: transparent;
   transition: background-color 0.3s, transform 0.3s;
+  background-color: transparent;
 }
 
-.toggle-temperature button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
 
-.toggle-temperature button:active {
-  transform: scale(0.9);
-}
+@media screen and (320px <= width <= 425px) {
+  body {
+    font-size: 0.9rem;
+  }
+  
+  header {
+    display: grid;
+    grid-template-columns: 25% 60% 15%;
+    place-items: center;
+  }
 
-.toggle-temperature .mdi {
-  font-size: 28px;
-}
+  header h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  font-style: italic;
-  width: 100%;
-  text-align: center;
-}
+  header .logo span {
+    display: none;
+  }
 
-footer .author {
-  color: inherit;
-}
+  header .search {
+    max-width: 90%;
+  }
 
-footer .author:hover {
-  font-weight: 900;
+  .search input {
+    max-width: 80%
+  }
 }
