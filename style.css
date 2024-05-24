@@ -144,6 +144,26 @@ main .middle-information {
   gap: var(--x-small);
 }
 
+main .right-information {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--small);
+}
+
+.right-information>div {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
+  border-radius: var(--normal);
+  padding: var(--small) var(--big);
+  display: flex;
+  align-items: center;
+  gap: var(--normal);
+}
+
+.right-information>div span {
+  font-size: 84px;
+}
+
+
 @media screen and (320px <=width <=425px) {
   body {
     font-size: 0.9rem;
@@ -175,6 +195,7 @@ main .middle-information {
   main {
     display: flex;
     flex-direction: column;
+    gap: var(--normal);
     padding: var(--normal);
   }
 
@@ -215,5 +236,14 @@ main .middle-information {
 
   main .right-information {
     order: 2;
+    font-size: 1rem;
+  }
+
+  .right-information>div {
+    padding: var(--x-small) var(--small);
+  }
+
+  .right-information>div span {
+    font-size: var(--x-big);
   }
 }
