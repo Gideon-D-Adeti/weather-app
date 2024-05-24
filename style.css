@@ -66,10 +66,21 @@ main {
   color: rgba(255, 255, 255, 0.8);
 }
 
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo .mdi {
+  font-size: var(--x-big);
+}
+
 .search {
   border: var(--xx-small) solid rgba(255, 255, 255, 0.8);
   border-radius: var(--big);
-  padding: var(--xx-small) var(--x-small);
+  padding: var(--x-small) var(--small);
+  margin-left: -17.5%;
 }
 
 .search form {
@@ -81,6 +92,10 @@ form>* {
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+.search .mdi {
+  font-size: 20px;
 }
 
 .search .mdi,
@@ -96,6 +111,18 @@ form>* {
   border-radius: 50%;
   transition: background-color 0.3s, transform 0.3s;
   background-color: transparent;
+}
+
+.toggle-temperature button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.toggle-temperature button:active {
+  transform: scale(0.9);
+}
+
+.toggle-temperature .mdi {
+  font-size: 24px;
 }
 
 main {
@@ -216,6 +243,10 @@ footer .author:hover {
     place-items: center;
   }
 
+  header .mdi {
+    font-size: 0.9rem;
+  }
+
   header h1 {
     font-size: 1rem;
     text-align: center;
@@ -227,10 +258,16 @@ footer .author:hover {
 
   header .search {
     max-width: 90%;
+    margin-left: unset;
+    padding: var(--xx-small) var(--x-small);
   }
 
   .search input {
     max-width: 80%
+  }
+
+  .toggle-temperature .mdi {
+    font-size: 1.25rem;
   }
 
   main {
