@@ -53,12 +53,18 @@ footer {
   padding: var(--small);
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 var(--small) rgba(255, 255, 255, 0.1);
+}
 
-  header *,
-  ::placeholder, main {
-    color: rgba(255, 255, 255, 0.8);
-  }
-
+header *,
+::placeholder,
+main {
+  color: rgba(255, 255, 255, 0.8);
+}
 
 .search {
   border: var(--xx-small) solid rgba(255, 255, 255, 0.8);
@@ -77,7 +83,8 @@ form>* {
   background-color: transparent;
 }
 
-.search .mdi, .toggle-temperature {
+.search .mdi,
+.toggle-temperature {
   cursor: pointer;
 }
 
@@ -91,12 +98,57 @@ form>* {
   background-color: transparent;
 }
 
+main .middle-information {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
+  border-radius: var(--normal);
+  padding: var(--big);
+}
 
-@media screen and (320px <= width <= 425px) {
+.middle-information .location,
+.middle-information .condition {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: var(--x-small);
+}
+
+.middle-information .temperature-and-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.temperature-and-icon .icon {
+  width: var(--xx-big);
+  height: auto;
+}
+
+.icon img {
+  height: auto;
+  width: 100%
+}
+
+.middle-information .temperature {
+  font-size: var(--xx-big);
+  font-family: 'Lato', sans-serif;
+}
+
+.middle-information hr {
+  margin: var(--normal) auto;
+}
+
+.middle-information .date-and-time {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: var(--x-small);
+}
+
+@media screen and (320px <=width <=425px) {
   body {
     font-size: 0.9rem;
   }
-  
+
   header {
     display: grid;
     grid-template-columns: 25% 60% 15%;
@@ -118,5 +170,50 @@ form>* {
 
   .search input {
     max-width: 80%
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: var(--normal);
+  }
+
+  main .left-information {
+    order: 3;
+  }
+
+  main .middle-information {
+    order: 1;
+    padding: var(--normal);
+  }
+
+  .middle-information .mdi {
+    font-size: 1.25rem;
+  }
+
+  .middle-information .location,
+  .middle-information .condition {
+    font-size: 1rem;
+  }
+
+  .middle-information .temperature-and-icon .icon {
+    width: var(--x-big);
+    height: auto;
+  }
+
+  .temperature-and-icon .temperature {
+    font-size: var(--x-big);
+  }
+
+  .middle-information hr {
+    margin: var(--small) auto;
+  }
+
+  .middle-information .date-and-time {
+    font-size: 0.9rem;
+  }
+
+  main .right-information {
+    order: 2;
   }
 }
