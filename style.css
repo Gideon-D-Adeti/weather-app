@@ -45,6 +45,9 @@ button {
 body {
   background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
   font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-rows: 12.5% 81.25% 6.25%;
+  min-height: 100vh;
 }
 
 header,
@@ -122,7 +125,7 @@ form>* {
 }
 
 .toggle-temperature .mdi {
-  font-size: 24px;
+  font-size: 26px;
 }
 
 main {
