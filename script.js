@@ -1,1 +1,12 @@
-
+const currentLocation = document.querySelector('.location .data')
+const dateAndTime = document.querySelector('.date-and-time .data')
+const temperature = document.querySelector('.temperature .data')
+const condition = document.querySelector('.condition .data')
+const windSpeed = document.querySelector('.wind-speed .data')
+const pressure = document.querySelector('.pressure .data')
+const precipitation = document.querySelector('.precipitation .data')
+const humidity = document.querySelector('.humidity .data')
+const cloud = document.querySelector('.cloud .data')
+const feelsLike = document.querySelector('.feels-like .data')
+const visibility = document.querySelector('.visibility .data')
+const uvIndex = document.querySelector('.uv-index .data')
