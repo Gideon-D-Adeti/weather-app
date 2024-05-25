@@ -238,6 +238,7 @@ footer .author:hover {
 @media screen and (320px <=width <=425px) {
   body {
     font-size: 0.9rem;
+    display: unset;
   }
 
   header {
